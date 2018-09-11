@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TextField?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" prefHeight="506.0" prefWidth="558.0" style="-fx-background-color: #4682B4;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nethsisilaproject.LoginScreenController">
    <children>
@@ -20,35 +19,27 @@
             <Image url="@../back.jpg" />
          </image>
       </ImageView>
-      <Pane layoutX="109.0" layoutY="54.0" prefHeight="338.0" prefWidth="340.0" style="-fx-background-color: DeepSkyBlue;">
+      <Pane layoutX="101.0" layoutY="53.0" prefHeight="338.0" prefWidth="340.0" style="-fx-background-color: DeepSkyBlue;">
          <children>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="113.0" layoutY="-30.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="104.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../login-gif-images-12.gif" />
                </image>
             </ImageView>
-            <TextField alignment="TOP_CENTER" layoutX="104.0" layoutY="130.0" prefHeight="25.0" prefWidth="169.0" promptText="User Name" style="-fx-background-color: MidnightBlue;">
-               <font>
-                  <Font name="Arial Bold" size="13.0" />
-               </font>
-            </TextField>
-            <TextField alignment="CENTER" layoutX="104.0" layoutY="181.0" prefHeight="25.0" prefWidth="169.0" promptText="Password" style="-fx-background-color: MidnightBlue;">
-               <font>
-                  <Font name="Arial" size="13.0" />
-               </font>
-            </TextField>
-            <Button layoutX="63.0" layoutY="235.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: LightSteelBlue;" text="Forgot" />
-            <Button layoutX="174.0" layoutY="235.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="99.0" style="-fx-background-color: LightSteelBlue;" text="Login" />
-            <ImageView fitHeight="32.0" fitWidth="36.0" layoutX="58.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="32.0" fitWidth="36.0" layoutX="84.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../user-login-icon-14.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="32.0" fitWidth="36.0" layoutX="58.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="32.0" fitWidth="36.0" layoutX="84.0" layoutY="216.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../lock_secure_security_password_private_key-512.png" />
                </image>
             </ImageView>
+            <JFXTextField fx:id="username" focusColor="#fefeff" layoutX="132.0" layoutY="157.0" promptText="Enter User Name" unFocusColor="MIDNIGHTBLUE" />
+            <JFXTextField fx:id="password" focusColor="WHITE" layoutX="132.0" layoutY="220.0" promptText="Enter Password" unFocusColor="MIDNIGHTBLUE" />
+            <JFXButton buttonType="RAISED" layoutX="116.0" layoutY="275.0" onMouseClicked="#loginbutton" style="-fx-background-color: MidNightBlue;" text="Login" textFill="#f8efef" />
+            <JFXButton buttonType="RAISED" layoutX="183.0" layoutY="275.0" style="-fx-background-color: MidNightBlue;" text="Cancel" textFill="#ebe2e2" />
          </children>
       </Pane>
    </children>

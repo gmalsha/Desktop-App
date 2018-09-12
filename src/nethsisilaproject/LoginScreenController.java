@@ -5,26 +5,37 @@
  */
 package nethsisilaproject;
 
+import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXDialog;
+import com.jfoenix.controls.JFXDialogLayout;
 import com.jfoenix.controls.JFXTextField;
+import com.mysql.jdbc.PreparedStatement;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.StackPane;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import javafx.util.Duration;
+import org.controlsfx.control.Notifications;
+import org.controlsfx.control.action.Action;
 
 /**
  * FXML Controller class
@@ -48,6 +59,40 @@ public class LoginScreenController implements Initializable {
 
     @FXML
     private void loginbutton(MouseEvent event) {
+        
+        
+        if (username.getText().toString().equals("")) {
+            
+              Image image=new Image("img/error.png");
+            Notifications notification = Notifications.create()
+            .title("Error")
+            .text("Usename cannot be epmty")
+            .hideAfter(Duration.seconds(5))
+            .position(Pos.BOTTOM_LEFT)
+            .graphic(new ImageView(image)); 
+            notification.darkStyle();
+                notification.show();
+            
+            
+        }
+        
+        
+         else if (password.getText().toString().equals("")) {
+            
+              Image image=new Image("img/error.png");
+            Notifications notification = Notifications.create()
+            .title("Error")
+            .text("Usename cannot be epmty")
+            .hideAfter(Duration.seconds(2))
+            .position(Pos.TOP_CENTER)
+            .graphic(new ImageView(image)); 
+            notification.darkStyle();
+                notification.show();
+            
+            
+        }
+        
+        else{
         
         boolean isExist = false;
         String userPassword = "";
@@ -143,6 +188,6 @@ public class LoginScreenController implements Initializable {
         }
         
     }
-    
+   } 
 }
   

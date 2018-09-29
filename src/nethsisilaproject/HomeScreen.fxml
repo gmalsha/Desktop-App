@@ -5,68 +5,83 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="572.0" prefWidth="861.0" style="-fx-background-color: #4682B4;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nethsisilaproject.HomeScreenController">
+<StackPane fx:id="stackpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nethsisilaproject.HomeScreenController">
    <children>
-      <Pane layoutX="72.0" layoutY="37.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 12px;">
+      <AnchorPane id="AnchorPane" prefHeight="730.0" prefWidth="1366.0" style="-fx-background-color: #4682B4;">
          <children>
-            <ImageView fitHeight="125.0" fitWidth="128.0" layoutX="38.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../img/reservation.png" />
-               </image>
-            </ImageView>
-            <Label layoutX="72.0" layoutY="163.0" text="Reservation" textFill="#212122" />
+            <Pane fx:id="pane_reserve" layoutX="207.0" layoutY="37.0" onMouseClicked="#reservationScreen" onMouseEntered="#mouse_Hover_Rseserve" onMouseExited="#mouse_Exit_Reserve" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 12px;">
+               <children>
+                  <ImageView fitHeight="125.0" fitWidth="128.0" layoutX="38.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/reservation.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="72.0" layoutY="163.0" text="Reservation" textFill="#212122" />
+               </children>
+            </Pane>
+            <Pane fx:id="pane_rooms" layoutX="537.0" layoutY="37.0" onMouseClicked="#roomsScreen" onMouseEntered="#mouse_Hover_Rooms" onMouseExited="#mouse_Exit_Rooms" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 12px; ">
+               <children>
+                  <Label layoutX="90.0" layoutY="152.0" text="Rooms " />
+                  <ImageView fitHeight="117.0" fitWidth="125.0" layoutX="32.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/room.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="pane_food" layoutX="387.0" layoutY="314.0" onMouseClicked="#foodScreen" onMouseEntered="#mouse_Hover_Food" onMouseExited="#mouse_Exit_Food" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 12px;">
+               <children>
+                  <ImageView fitHeight="117.0" fitWidth="105.0" layoutX="34.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/food.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="62.0" layoutY="156.0" text="Food" />
+               </children>
+            </Pane>
+            <Pane fx:id="pane_logout" layoutX="84.0" layoutY="314.0" onMouseClicked="#logoutScreen" onMouseEntered="#mouse_Hover_Logout" onMouseExited="#mouse_Exit_Logout" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 12px;">
+               <children>
+                  <ImageView fitHeight="104.0" fitWidth="105.0" layoutX="48.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/logout.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="86.0" layoutY="163.0" text="Logout" />
+               </children>
+            </Pane>
+            <Pane fx:id="pane_exit" layoutX="1030.0" layoutY="302.0" onMouseClicked="#exitScreen" onMouseEntered="#mouse_Hover_Exit" onMouseExited="#mouse_Exit_Exit" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 12px;">
+               <children>
+                  <ImageView fitHeight="117.0" fitWidth="105.0" layoutX="48.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/exit.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="91.0" layoutY="155.0" text="Exit" />
+               </children>
+            </Pane>
+            <Pane fx:id="pane_foodorders" layoutX="874.0" layoutY="26.0" onMouseClicked="#foodOrderScreen" onMouseEntered="#mouse_Hover_FoodOrders" onMouseExited="#mouse_Exit_FoodOrders" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 12px;">
+               <children>
+                  <Label layoutX="62.0" layoutY="156.0" text="Food Orders" />
+                  <ImageView fitHeight="117.0" fitWidth="105.0" layoutX="40.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/food.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="pane_customers" layoutX="710.0" layoutY="314.0" onMouseClicked="#customersScreen" onMouseEntered="#mouse_Hover_Customers" onMouseExited="#mouse_Exit_Customers" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 12px;">
+               <children>
+                  <ImageView fitHeight="117.0" fitWidth="117.0" layoutX="48.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/customer.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="78.0" layoutY="153.0" text="Customers" />
+               </children>
+            </Pane>
          </children>
-      </Pane>
-      <Pane layoutX="344.0" layoutY="37.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 12px; ">
-         <children>
-            <ImageView fitHeight="117.0" fitWidth="125.0" layoutX="41.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../img/room.jpg" />
-               </image>
-            </ImageView>
-            <Label layoutX="90.0" layoutY="152.0" text="Rooms" />
-         </children>
-      </Pane>
-      <Pane layoutX="606.0" layoutY="37.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 12px;">
-         <children>
-            <ImageView fitHeight="117.0" fitWidth="117.0" layoutX="48.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../img/customer.png" />
-               </image>
-            </ImageView>
-            <Label layoutX="78.0" layoutY="153.0" text="Customers" />
-         </children>
-      </Pane>
-      <Pane layoutX="344.0" layoutY="286.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 12px;">
-         <children>
-            <ImageView fitHeight="117.0" fitWidth="105.0" layoutX="48.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../img/food.png" />
-               </image>
-            </ImageView>
-            <Label layoutX="62.0" layoutY="156.0" text="Food &amp; Drinks" />
-         </children>
-      </Pane>
-      <Pane layoutX="72.0" layoutY="286.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 12px;">
-         <children>
-            <ImageView fitHeight="104.0" fitWidth="105.0" layoutX="48.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../img/logout.png" />
-               </image>
-            </ImageView>
-            <Label layoutX="86.0" layoutY="163.0" text="Logout" />
-         </children>
-      </Pane>
-      <Pane layoutX="606.0" layoutY="286.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 12px;">
-         <children>
-            <ImageView fitHeight="117.0" fitWidth="105.0" layoutX="48.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../img/exit.png" />
-               </image>
-            </ImageView>
-            <Label layoutX="91.0" layoutY="155.0" text="Exit" />
-         </children>
-      </Pane>
+      </AnchorPane>
    </children>
-</AnchorPane>
+</StackPane>
